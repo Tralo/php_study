@@ -1,0 +1,31 @@
+zendFramework配置
+1.在php.ini文件中
+extension=php_pdo_mysql.dll （去掉分号）
+
+2.开启Apache的rewrite模块，在httpd.conf
+#启用 rewrite功能
+LoadModule rewrite_module modules/mod_rewrite.so
+
+AllowOverride none 改为all
+
+
+# Virtual hosts   启动虚拟主机的配置
+Include conf/extra/httpd-vhosts.conf   (去掉#)
+
+
+在httpd-vhosts.conf中
+#配置我们自己的虚拟主机
+<VirtualHost *:80>
+    DocumentRoot "C:/Users/Administrator/Desktop/gitproject/php_study/zend_study/testzf2\library"
+    ServerName myzf.com
+    DirectoryIndex index.php
+	<Directory />
+	Options FollowSymLinks
+	AllowOverride None
+	Order allow,deny
+	Allow from all
+	</Directory>
+</VirtualHost>
+
+
+
