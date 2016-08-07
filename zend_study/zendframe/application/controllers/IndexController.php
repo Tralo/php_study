@@ -1,5 +1,6 @@
 <?php
 require_once APPLICATION_PATH.'/models/Message.php';
+require_once APPLICATION_PATH.'/models/Item.php';
 require_once 'BaseController.php';
 class IndexController extends BaseController
 {
@@ -12,11 +13,22 @@ class IndexController extends BaseController
 
         //到数据库中查询
         $messageModel = new Message();
+
         $res = $messageModel->fetchAll()->toArray();
+
         //echo "<pre>";
         //print_r($res);
         //echo "</pre>";
 
+         $data = array(
+            'name'=>'aa',
+            'description'=>'bb',
+            'description'=>0
+        );
+
+        $itemModel = new Item();
+        $itemModel->insert($data);
+        
         
     
         //怎样把控制器中的数据(array,object,int...)

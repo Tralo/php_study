@@ -1,6 +1,8 @@
 <?php
-
-class IndexController extends Zend_Controller_Action
+require_once 'BaseController.php';
+require_once APPLICATION_PATH.'/models/Message.php';
+require_once APPLICATION_PATH.'/models/Item.php';
+class IndexController extends BaseController
 {
 
     public function init()
@@ -11,8 +13,8 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
+        $itemModel = new Item();
     }
 
 
 }
-
