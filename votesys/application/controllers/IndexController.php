@@ -5,15 +5,10 @@ require_once APPLICATION_PATH.'/models/Item.php';
 class IndexController extends BaseController
 {
 
-    public function init()
-    {
-        /* Initialize action controller here */
-    }
-
     public function indexAction()
     {
         // action body
-        $itemModel = new Item();
+       $itemModel = new Item();
     }
 
 

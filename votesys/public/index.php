@@ -1,5 +1,7 @@
 <?php
 
+
+file_put_contents('d:/note.txt', __FILE__.date('Y-m-d H:i:s')."\r\n",FILE_APPEND);
 // Define path to application directory
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));

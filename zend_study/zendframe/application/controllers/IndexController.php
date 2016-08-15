@@ -36,7 +36,5 @@ class IndexController extends BaseController
         //如果这里什么都没有写,相当于
         //$this->render('index');
     }
-
-
 }
 
