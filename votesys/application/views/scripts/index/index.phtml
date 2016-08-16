@@ -11,7 +11,7 @@
         <td><?=$item['name'] ?></td>
         <td><?=$item['description'] ?></td>
         <td><?=$item['vote_count'] ?></td>
-        <td><a href="/vote/vote">投票</a></td>
+        <td><a href="/vote/vote?itemid=<?=$item['id']?>">投票</a></td>
     </tr>
     <?php } ?>
 </table>
