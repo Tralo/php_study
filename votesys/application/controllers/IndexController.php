@@ -7,8 +7,14 @@ class IndexController extends BaseController
 
     public function indexAction()
     {
-        // action body
-       $itemModel = new Item();
+       //创建一个表模型
+        $itemModel = new Item();
+
+        $items  = $itemModel->fetchAll()->toArray();
+
+        //把查询出的数据分配
+        $this->view->items = $items;
+
     }
 
 
