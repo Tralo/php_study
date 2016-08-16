@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ajax牛刀小试</title>
+	<script type="text/javascript" src="jquery.min.js">
+	</script>
+</head>
+<body>
+	<button id="btn">发送一个Ajax请求</button>
+	<div id="box"></div>
+</body>
+	<script type="text/javascript">
+		$('#btn').click(function(){
+			/*$.get('demo1.php',{'username':'科学家','age':18},function(data){
+				$('#box').html(data)
+			});*/
+
+			/*$.post('demo1.php',{'username':'数学家','age':20},function(data){
+				$('#box').html(data);
+			});*/
+			$.ajax({
+				'url':'demo1.php',
+				'data':{'username':'科学家','age':18},
+				'success':function(data){
+					$('#box').html(data);
+				},
+				'dataType':'html',
+				'type':'post'
+
+			});
+		});
+		
+		// $.post();
+		// $.ajax();
+
+	</script>
+</html>

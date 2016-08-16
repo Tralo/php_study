@@ -2,7 +2,7 @@
 require_once 'BaseController.php';
 require_once APPLICATION_PATH.'/models/Message.php';
 require_once APPLICATION_PATH.'/models/Item.php';
-class AdminController extends BaseController{
+class AdminController extends BaseController {
     public function indexAction()
     {
         // action body
